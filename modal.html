@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 200px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<h2>Animated Modal with Header and Footer</h2>
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Open Modal</button>
+<svg>
+	<text x="400" y="40"
+	      style="fill: #000000; stroke: none; font-size: 48px; text-anchor:start;">
+	    Fill only
+	</text>
+		/>
+	<text x="400" y="100"
+	      style="fill: none; stroke: #000000;  font-size: 48px;text-anchor:middle;">
+	    Stroke only
+	</text>
+	<text x="400" y="150"
+	      style="fill: #999999; stroke: #000000;  font-size: 48px;text-anchor:end;">
+	    Fill and stroke
+	</text>    
+</svg>
+
+
+
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">x</span>
+      <h3>MY Svg animation</h3>
+      <svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    
+    <rect x="0" y="0" width="50" height="50"
+        style="stroke: #ff0000; fill: none;">
+      <animateMotion
+              path="M10,50 q60,50 100,0 q60,-50 100,0"
+              begin="0s" dur="8s" repeatCount="indefinite"
+              rotate="45"
+              />
+   </rect>
+      
+  <path d="M50,50 L100,150 L150,50
+            A50,50 0 1,0 50,50 
+            q50,30  100,0
+           "
+        
+        style="stroke:#ffbbff";
+        stroke-width:8;
+        fill="none";"
+        />
+ 	
+ 	
+ 	<g>
+   <path d="M200,50 L200,100 L100,100
+        z"
+        style="stroke:#badbad";
+        stroke-width:8; fill="none";" >
+    </g>
+</svg>
+    </div>
+    <div class="modal-body">
+      <p>Video about</p>
+      
+      <p></p>
+    </div>
+    <div class="modal-footer">
+      <h3></h3>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
+
